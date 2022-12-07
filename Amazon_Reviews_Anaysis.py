@@ -145,10 +145,10 @@ def main():
         #df_word_cloud = df_auto_topic_prob
         im = 'auto_wordcloud.png'
     elif option == 'Software':
-        sftw_clean_reviews_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/sftw_clean_reviews.csv?token=GHSAT0AAAAAAAAASIRYDIE7ECBVSZAD7LM6Y4VLN7A'
-        sftw_topics_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/sftw_topics_ui.csv?token=GHSAT0AAAAAAAAASIRZITUI5URO7ZPHLOHCY4VLO4A'
-        sftw_topic_reviews = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/sftw_topic_review_ui.csv?token=GHSAT0AAAAAAAAASIRYHZV5XPZR6P3DJA3QY4VLOUQ'
-        sftw_sentiments = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/sftw_sentiments.csv?token=GHSAT0AAAAAAAAASIRY3SQ4P6JW6VVTT55QY4VLOLQ'
+        sftw_clean_reviews_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/sftw_clean_reviews.csv'
+        sftw_topics_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/sftw_topics_ui.csv'
+        sftw_topic_reviews = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/gc_topic_review_ui.csv'
+        sftw_sentiments = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/sftw_sentiments.csv'
         df_sftw_clean_reviews = pd.read_csv(sftw_clean_reviews_url)
         df_sftw_topics = pd.read_csv(sftw_topics_url)
         df_sftw_topics_reviews = pd.read_csv(sftw_topic_reviews)
