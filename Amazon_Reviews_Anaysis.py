@@ -16,13 +16,17 @@ from wordcloud import WordCloud
 
 path = os.getcwd()
 
-auto_word_list = ['battery', 'quality', 'tool', 'price', 'small', 'truck','plug', 'filter', 'oil', 'leather', 'air', 'water', 'clean', 'engine', 'bottle', 'kit','wax', 'paint', 'shine', 'clay', 'polish', 'products', 'wash', 'finish', 'spray', 'plastic', 'wheel', 		'tire','best', 'cover','cheap', 'hose', 'trailer', 'light', 'install','rv', 'fit']
+auto_word_list = ['battery', 'quality', 'tool', 'price', 'small', 'truck', 'plug', 'filter', 'oil', 'leather', 'air', 'water', 'clean', 'engine', 'bottle', 'kit', 'wax', 'paint',
+                  'shine', 'clay', 'polish', 'products', 'wash', 'finish', 'spray', 'plastic', 'wheel', 		'tire', 'best', 'cover', 'cheap', 'hose', 'trailer', 'light', 'install', 'rv', 'fit']
 
-mag_word_list = ['order', 'months', 'enjoy', 'computer', 'worth', 'reviews',  'reading', 'health', 'kindle', 'favorite', 'cover', 'pages', 'tips', 'issues', 'helpful', 'fashion', 'allure', 'handyman', 'home','informative','content', 'stuff','ads','gift', 'subscribed', 		'article']
+mag_word_list = ['order', 'months', 'enjoy', 'computer', 'worth', 'reviews',  'reading', 'health', 'kindle', 'favorite', 'cover', 'pages', 'tips',
+                 'issues', 'helpful', 'fashion', 'allure', 'handyman', 'home', 'informative', 'content', 'stuff', 'ads', 'gift', 'subscribed', 		'article']
 
-gc_word_list = ['love', 'kindle' 'friend', 'birthday', 'christmas', 'email', 'money','wedding', 'thank', 'birthday', 'gifts', 'present','thanks', 'convenient','happy', 'printed']
+gc_word_list = ['love', 'kindle' 'friend', 'birthday', 'christmas', 'email', 'money', 'wedding',
+                'thank', 'birthday', 'gifts', 'present', 'thanks', 'convenient', 'happy', 'printed']
 
-sftw_word_list = ['microsoft', 'price', 'subscription', 'install', 'key', 'year', 'deal', 'computers', 'windows', 'card', 'ms', 'mac', 'spanish', 'japanese', 'language', 'learn', 'dvd', 'interface', 'computer', 'excel', 'support', 'problems', 'purchase', 'notes', 		'word']
+sftw_word_list = ['microsoft', 'price', 'subscription', 'install', 'key', 'year', 'deal', 'computers', 'windows', 'card', 'ms', 'mac',
+                  'spanish', 'japanese', 'language', 'learn', 'dvd', 'interface', 'computer', 'excel', 'support', 'problems', 'purchase', 'notes', 		'word']
 
 
 def home_page_module():
@@ -125,10 +129,10 @@ def main():
 
     #option = st.selectbox( "Please Select Category" , ('-- Choose One -','Automotive','Software','Magazine Subscription','Gift Cards' ))
     if option == 'Automotive':
-        auto_clean_reviews_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/auto_clean_reviews.csv?token=GHSAT0AAAAAAAAASIRZ4NL5ESAHPF4JH7UIY4VLCGA'
-        auto_topics_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/auto_topics_ui.csv?token=GHSAT0AAAAAAAAASIRZRHCN6G3OUPCEYX3AY4VLDIA'
-        auto_topic_reviews = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/auto_topic_review_ui.csv?token=GHSAT0AAAAAAAAASIRYOAQ4KTXSWKLZSQPSY4VLC4A'
-        auto_sentiments = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/auto_sentiments.csv?token=GHSAT0AAAAAAAAASIRYRJMTIIIHCITETBZ2Y4VLCTQ'
+        auto_clean_reviews_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/auto_clean_reviews.csv'
+        auto_topics_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/auto_topics_ui.csv'
+        auto_topic_reviews = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/auto_topic_review_ui.csv'
+        auto_sentiments = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/auto_sentiments.csv'
         df_auto_clean_reviews = pd.read_csv(auto_clean_reviews_url)
         df_auto_topics = pd.read_csv(auto_topics_url)
         df_auto_topics_reviews = pd.read_csv(auto_topic_reviews)
@@ -188,7 +192,6 @@ def main():
 
     df_sentiments['Actual_Sentiment'] = df_sentiments['overall'].apply(
         lambda overall: 'positive' if overall >= 3 else 'negative')
-
 
     # HOME PAGE
     if choice == "Home":
