@@ -160,10 +160,10 @@ def main():
         df_sentiments = df_sftw_sentiments
         im = 'sftw_wordcloud.png'
     elif option == 'Gift Cards':
-        gc_clean_reviews_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/gc_clean_reviews.csv?token=GHSAT0AAAAAAAAASIRYQMQYNICR4KOAT6CKY4VLLVA'
-        gc_topics_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/gc_topics_ui.csv?token=GHSAT0AAAAAAAAASIRYT52KGMSIXLT5IU6QY4VLNIA'
-        gc_topic_reviews = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/gc_topic_review_ui.csv?token=GHSAT0AAAAAAAAASIRZAL4RWUNRX764XGEAY4VLMOQ'
-        gc_sentiments = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/gc_sentiments.csv?token=GHSAT0AAAAAAAAASIRZQ6YBM4WRPWHQOBTSY4VLMEA'
+        gc_clean_reviews_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/gc_clean_reviews.csv'
+        gc_topics_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/gc_topics_ui.csv'
+        gc_topic_reviews = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/gc_topic_review_ui.csv'
+        gc_sentiments = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/gc_sentiments.csv'
         df_gc_clean_reviews = pd.read_csv(gc_clean_reviews_url)
         df_gc_topics = pd.read_csv(gc_topics_url)
         df_gc_topics_reviews = pd.read_csv(gc_topic_reviews)
@@ -175,10 +175,10 @@ def main():
         df_sentiments = df_gc_sentiments
         im = 'gc_wordcloud.png'
     elif option == 'Magazine Subscription':
-        mag_clean_reviews_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/mag_clean_reviews.csv?token=GHSAT0AAAAAAAAASIRYGMSZQI4JEGLDFUQSY4VLQ2A'
-        mag_topics_url = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/mag_topics_ui.csv?token=GHSAT0AAAAAAAAASIRZFF2BCHLA6WGILLBMY4VLR2Q'
-        mag_topic_reviews = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/mag_topic_review_ui.csv?token=GHSAT0AAAAAAAAASIRZ6RMTVNYWQA7OUV66Y4VLRMQ'
-        mag_sentiments = 'https://raw.github.iu.edu/pyacham/NLP_FinalProject/main/mag_sentiments.csv?token=GHSAT0AAAAAAAAASIRZVWK3K67QZNOFKWFUY4VLRCQ'
+        mag_clean_reviews_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/mag_clean_reviews.csv'
+        mag_topics_url = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/mag_topics_ui.csv'
+        mag_topic_reviews = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/mag_topic_review_ui.csv'
+        mag_sentiments = 'https://raw.githubusercontent.com/prasadyacham/NLP_AmazonReviews/main/mag_sentiments.csv'
         df_mag_clean_reviews = pd.read_csv(mag_clean_reviews_url)
         df_mag_topics = pd.read_csv(mag_topics_url)
         df_mag_topics_reviews = pd.read_csv(mag_topic_reviews)
